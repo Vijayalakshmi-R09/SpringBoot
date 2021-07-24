@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ <bean id="CollectType" class="com.app.CollectionsType">
+ <property name="mlist">
+	  <list>
+	       <value>Apple</value>
+	       <value>Samsung</value>
+	       <value>OnePlus</value>
+	</list>
+  </property> 
+ <property name="mCompany">
+      	<list>
+      	    <ref bean="MobileCom1"/>
+      	    <ref bean="MobileCom2"/>
+      	</list>
+      </property>
+ </bean>
+ 
+<bean id="MobileCom1" class="com.app.MobileCompany">
+	<property name="cid" value="1" />
+	<property name="cName" value="Apple" />
+</bean>   
+<bean id="MobileCom2" class="com.app.MobileCompany">
+	<property name="cid" value="2" />
+	<property name="cName" value="Samsung" />
+</bean>       
+</beans>
