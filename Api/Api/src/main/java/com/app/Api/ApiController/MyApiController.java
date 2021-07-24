@@ -37,7 +37,12 @@ public class MyApiController extends BaseApiController
         System.out.println(cust);
         service.persitCustomer(cust);
         return  new ResponseEntity<List<Customer>>(service.fetchAllCust(),HttpStatus.OK);
-    } 
+    }
+     @GetMapping(value="/customer",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Customer>> getCustomer(@RequestBody Customer cust)
+    {
+        return new ResponseEntity<List<Customer>>(service.fetchAllCust(),HttpStatus.OK);
+    }
     @GetMapping(value = "name",produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<String>> getName()
     {
