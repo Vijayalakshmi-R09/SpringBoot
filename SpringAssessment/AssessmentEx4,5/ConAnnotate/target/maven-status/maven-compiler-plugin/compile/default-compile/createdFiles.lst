@@ -1,0 +1,4 @@
+beans\ManagerImpl.class
+beans\Manager.class
+verify\Verify.class
+configuration\ApplicationConfig.class
